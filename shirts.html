@@ -751,10 +751,13 @@ onsubmit="submitted=true;">
 
 
                         </form>
-                        <div class="onsubmit" id="contactSuccess">
-                          <strong>Thank you!</strong> Your order has been sent to us.
+                        <div onsubmit id="contactSuccess">
+                          <strong>Success!</strong> Your message has been sent to us.
                         </div>
 
+                        <div class="alert alert-danger hidden" id="contactError">
+                          <strong>Error!</strong> There was an error sending your message.
+                        </div>
                       </div>
                     </div>
                   </div>
