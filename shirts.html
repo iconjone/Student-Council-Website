@@ -680,7 +680,7 @@
                       <!-- CONTACT FORM -->
                       <div >
                         <form id="form" action="https://docs.google.com/forms/d/e/1FAIpQLSdY-JVYJprMyOFgbdNDHCPpxxPTsCINOYspmoM_g8Q8so_dRQ/formResponse" method="post" target="hidden_iframe"
-onsubmit="submitted=true;">
+onsubmit="submitted=true; showHide();">
 
                           <div class="row">
                             <div class="col-md-12 mb-30">
@@ -764,13 +764,25 @@ onsubmit="submitted=true;">
 
 
                         </form>
-                        <div onsubmit id="contactSuccess">
+                        <div class="alert alert-success hidden" id="Success">
                           <strong>Success!</strong> Your message has been sent to us.
                         </div>
 
                         <div class="alert alert-danger hidden" id="contactError">
                           <strong>Error!</strong> There was an error sending your message.
                         </div>
+                        <script type="text/javascript">
+ function showHide() {
+   var div = document.getElementById('Success');
+   if (div.style.display == 'none') {
+     div.style.display = '';
+   }
+   else {
+     div.style.display = 'none';
+   }
+ }
+</script>
+
                       </div>
                     </div>
                   </div>
