@@ -7,6 +7,7 @@
     float: none;
     margin: 0 auto;
 }
+.i-am-centered { margin: auto; max-width: 300px;}
 .btn-default,
 .btn-primary,
 .btn-success,
