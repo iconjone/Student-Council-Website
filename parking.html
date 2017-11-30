@@ -292,6 +292,7 @@
       window.variable = "test";
 
       $.ajax({url:URL + "D2",async:false}).done(function(result){ window.variable = result; });
+      console.log(window.variable);
 
       document.getElementById("demo").value = window.variable;
 }
