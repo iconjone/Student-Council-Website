@@ -286,8 +286,18 @@
 
                     </div>
                   </div>
+                  <script>
+                  var URL = "https://docs.google.com/spreadsheet/pub?key=1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k&gid=0&single=true&gid=0&output=txt&range=";
 
-                  <img src="images/gallery/shirts.png" width="302" height="30" usemap="#NavMap" 
+      window.variable = "test";
+
+      $.ajax({url:URL + "D2",async:false}).done(function(result){ window.variable = result; });
+
+      document.getElementById("demo").value = window.variable;
+}
+                  </script>
+  Test: <input type="text" id="demo" name="fname"><br>
+                  <img src="images/gallery/shirts.png" width="302" height="30" usemap="#NavMap"
                           style="border: 0px; border: 2.0em;">
                   <map name="NavMap">
                     <area shape="rect" coords="0,0,99,30" href="home.html" alt="Home"
