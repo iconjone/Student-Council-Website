@@ -289,7 +289,7 @@
                   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
                   <script>
                   $(document).ready(function () {
-                    getCell = function(){
+                  console.log('here');
       var api = 'https://spreadsheets.google.com/feeds/cells/';
   	var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
       var worksheet =  'default';
@@ -300,16 +300,17 @@
   		.done(function(data){
           	console.log(data)
           	if(data.entry){
-  				$('#results').prepend(data.entry.title['$t']+': '+data.entry.content['$t']+' <br />');
-          document.getElementById("demo").value = data.entry.content;
-              }else{
+  			//	$('#results').prepend(data.entry.title['$t']+': '+data.entry.content['$t']+' <br />');
+          document.getElementById("demo").value = data.entry.content['$t'];
+              }
+            });
+              /*else{
                   $('#results').prepend('Failed to fetch data <br />');
               }
           })
       	.fail(function(){
           	$('#results').prepend('Failed to fetch data <br />');
-      	});
-  }
+  }*/
 
 
 });
