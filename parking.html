@@ -287,14 +287,17 @@
                     </div>
                   </div>
                   <script>
-                  var URL = "https://docs.google.com/spreadsheet/pub?key=1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k&gid=0&single=true&gid=0&output=txt&range=";
+                  $(document).ready(function () {
+                    var URL = "https://docs.google.com/spreadsheet/pub?key=1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k&gid=0&single=true&gid=0&output=txt&range=";
 
-      window.variable = "test";
+                  window.variable = "test";
 
-      $.ajax({url:URL + "D2",async:false}).done(function(result){ window.variable = result; });
-      console.log(window.variable);
+                  $.ajax({url:URL + "D2",async:false}).done(function(result){ window.variable = result; });
+                  console.log(window.variable);
 
-      document.getElementById("demo").value = window.variable;
+                  document.getElementById("demo").value = window.variable;
+});
+
 
                   </script>
   Test: <input type="text" id="demo" name="fname"><br>
