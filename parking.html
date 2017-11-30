@@ -278,11 +278,12 @@
         <div class="page-section bg-gray col-centered">
               <div class="container-fluid col-centered">
                 <div class="row col-centered">
-
+      <!--
                   <div class="col-md-6 col-centered">
                     <div class="row row-sm-fix col-centered">
                         <img class="port-main-img" src="images/gallery/shirts.png" alt="img" >
                   </div>
+                -->
 
                     </div>
                   </div>
@@ -293,8 +294,8 @@
       var api = 'https://spreadsheets.google.com/feeds/cells/';
   	var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
       var worksheet =  'default';
-      var row =         '2';
-      var col =         '4';
+      var row =         '1';
+      var col =         '1';
       var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
       $.getJSON(url)
   		.done(function(data){
@@ -318,6 +319,22 @@
 
                   </script>
   Test: <input type="text" id="demo" name="fname"><br>
+  <canvas id="myCanvas" width="4800" height="1200">
+style="border:3px solid #000000;">
+  </canvas>
+  <script>
+  $(document).ready(function () {
+console.log("ran");
+  var context = document.getElementById('myCanvas').getContext("2d");
+
+  var img = new Image();
+  img.src = "images/gallery/shirts.png";
+  img.onload = function () {
+      console.log(context.drawImage(img, 0, 0));
+  }
+});
+
+</script>
                   <img src="images/gallery/shirts.png" width="302" height="30" usemap="#NavMap"
                           style="border: 0px; border: 2.0em;">
                   <map name="NavMap">
