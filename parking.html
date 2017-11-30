@@ -303,7 +303,13 @@
           	if(data.entry){
   			//	$('#results').prepend(data.entry.title['$t']+': '+data.entry.content['$t']+' <br />');
           document.getElementById("demo").value = data.entry.content['$t'];
-          $("#adder").load('<area shape="poly" coords="0,0,100,100" href="https://mcla.instructure.com/courses/1025982/wiki/entering-thauma" />');
+          var context = document.getElementById('myCanvas').getContext("2d");
+
+          var img = new Image();
+          img.src = "images/gallery/bbq.png";
+          img.onload = function () {
+              console.log(context.drawImage(img, 0, 0));
+        //  $("#adder").load('');
           console.log(added);
               }
             });
