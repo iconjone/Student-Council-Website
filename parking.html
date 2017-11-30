@@ -290,14 +290,17 @@
                   </div>
                 -->
 <style>
+#parking{
+  position: relative;
+}
 #green{
-  float.left;
+
   background:green;
   width:40px;
   height:40px;
   position:absolute;
-  left:30;
-  top:30;
+  left:80;
+  top:80;
 }
 </style>
                     </div>
@@ -308,36 +311,6 @@
 <div id="green"></div>
 </div>
 
-  Test: <input type="text" id="demo" name="fname"><br>
-  <canvas id="myCanvas" width="960" height="480">
-style="border:3px solid #000000;">
-  </canvas>
-  <script>
-  $(document).ready(function () {
-console.log("ran");
-  var context = document.getElementById('myCanvas').getContext("2d");
-  var img = new Image();
-  img.src = "images/gallery/bbq.png";
-  img.onload = function () {
-   console.log(context.drawImage(img, 0, 0));
-  }
-add();
-});
-
-
-</script>
-<script>
-function add(){
-var context = document.getElementById('myCanvas').getContext("2d");
-console.log(context);
-var ig1 = new Image();
-ig1.src = "images/gallery/X.png";
-ig1.onload = run(context,ig1);
-}
-function run(context,ig1){
-  context.drawImage(ig1, 0, 0);
-}
-</script>
 
 <script>
 $(document).ready(function () {
