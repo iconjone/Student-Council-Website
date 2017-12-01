@@ -333,37 +333,39 @@
 <script>
 $(document).ready(function () {
 console.log('here');
-var api = 'https://spreadsheets.google.com/feeds/cells/';
-var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
-var worksheet =  'default';
-var row =         '1';
-var col =         '1';
-var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
-$.getJSON(url)
-.done(function(data){
-console.log(data)
-if(data.entry){
-//	$('#results').prepend(data.entry.title['$t']+': '+data.entry.content['$t']+' <br />');
-//document.getElementById("demo").value = data.entry.content['$t'];
-var div = document.getElementById('green');
-div.style.left = data.entry.content['$t']+'px';
-div.style.top = data.entry.content['$t']+'px';
-}
-//  $("#adder").load('');
-console.log("added");
+var num = getCell(1,1);
 
-});
-/*else{
-$('#results').prepend('Failed to fetch data <br />');
-}
-})
-.fail(function(){
-$('#results').prepend('Failed to fetch data <br />');
-}*/
+  var div = document.getElementById('green');
+  div.style.left = num+'px';
+  div.style.top = num+'px';
+
 
 
 });
+function getCell(row, col)
+{
+  var api = 'https://spreadsheets.google.com/feeds/cells/';
+  var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
+  var worksheet =  'default';
+  var row =         'row';
+  var col =         'col';
+  var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
+  $.getJSON(url)
+  .done(function(data){
+  console.log(data)
+  if(data.entry){
+  //	$('#results').prepend(data.entry.title['$t']+': '+data.entry.content['$t']+' <br />');
+  //document.getElementById("demo").value = data.entry.content['$t'];
+//  var div = document.getElementById('green');
+//  div.style.left = data.entry.content['$t']+'px';
+  //div.style.top = data.entry.content['$t']+'px';
+  return(data.entry.content['$t']);
+  }
+  //  $("#adder").load('');
+  console.log("added");
 
+  });
+}
 
 </script>
 <div id="rest">
