@@ -347,8 +347,8 @@ function getCell(row, col)
   var api = 'https://spreadsheets.google.com/feeds/cells/';
   var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
   var worksheet =  'default';
-  var row =         'row';
-  var col =         'col';
+  var row =         row;
+  var col =         col;
   var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
   $.getJSON(url)
   .done(function(data){
