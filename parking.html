@@ -297,13 +297,11 @@
           position: relative;
           left:0;
           top:0;
-          width: auto;
-          height: auto;
 
           }
           div.green{
           background-color:green;
-          position:absolute;
+          position:relative;
           left:80px;
           top:80px;
           width:50px;
@@ -311,19 +309,20 @@
           opacity:.5;
           }
           div.green:hover {
+
     cursor: hand;
     cursor: pointer;
     opacity: .8;
 }
           div.red{
           background-color:red;
-          position:absolute;
+          position:relative;
           left:80px;
           top:80px;
           width:50px;
           height:30px;
           opacity:.5;
-          z:10;
+
           }
           #img1
           {
@@ -337,11 +336,11 @@
  height: auto;
           }
           #rest{
-            visibility: hidden;
-      position:relative;
-            top:380px;
-            width: auto;
-            height: 175%;
+
+            position:relative;
+                  top:380px;
+                  width: auto;
+                  height: 175%;
 
           }
 
@@ -350,9 +349,10 @@
                                     </div>
                                   </div>
 
+
                                   <div id="container">
                                       <img id="img1" src="http://rrhs18.com/images/gallery/parking_lot.jpg">
-                                      <div class="green" id="A1green" onclick=clicked('A1');></div>
+                                      <div class="green" id="A1green"></div>
                                       <div class="red" id="A1red"></div>
                                       <div class="green" id="A2green" onclick=clicked('A2');></div>
                                       <div class="red" id="A2red"></div>
