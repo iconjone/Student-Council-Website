@@ -421,9 +421,16 @@ function available(row, col,id){
       div.style.visibility = 'hidden';
       //$( "#"+id ).remove();
     }
+    if(data.entry.content['$t'] === 'y' && div.className === "green") {
+    div.style.visibility = 'visible';
+    //$( "#"+id ).remove();
+  }
       if(data.entry.content['$t'] === 'n' && div.className === "green")
       div.style.visibility = 'hidden';
   }
+  if(data.entry.content['$t'] === 'n' && div.className === "red")
+  div.style.visibility = 'visible';
+}
   })
   }
   function left(row, col,id){
