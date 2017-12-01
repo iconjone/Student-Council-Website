@@ -264,7 +264,7 @@
                             data-hoffset="['0','0','0','0']"
                             data-y="['center','center','center','center']"
                             data-voffset="['0','0','0','0']">
-                              Parking Reserves
+                              Reserve Parking
                             </div>
 
 
@@ -297,6 +297,8 @@
           position: relative;
           left:0;
           top:0;
+          width: auto;
+          height: auto;
 
           }
           div.green{
@@ -311,7 +313,7 @@
           div.green:hover {
     cursor: hand;
     cursor: pointer;
-    opacity: .9;
+    opacity: .8;
 }
           div.red{
           background-color:red;
@@ -335,8 +337,12 @@
  height: auto;
           }
           #rest{
+            visibility: hidden;
       position:relative;
-            top:480px;
+            top:380px;
+            width: auto;
+            height: 175%;
+
           }
 
                 </style>
@@ -362,7 +368,8 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script>
 function clicked(value){
-
+var textbox = document.getElementById('#parkingspot');
+textbox.value = value;
   alert(value);
 }
 var cellVal;
@@ -440,12 +447,13 @@ init(2,3,2,4,2,2,"A2red");
 </script>
 
                   <div class="col-md-6 col-centered">
-                    <div id="rest">
+
 
                     <div class="contact-form-cont col-centered">
                       <!-- TITLE -->
+                      <div id="rest">
                       <div class="mb-40 col-centered">
-                        <h3>Pre-Order your shirt!</h3>
+                        <h3>Reserve Your Parking Spot!</h3>
                       </div>
 
                       <!-- CONTACT FORM -->
@@ -458,99 +466,86 @@ init(2,3,2,4,2,2,"A2red");
 
  <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='';}"></iframe>-->
 
-                        <form id="form" action="https://docs.google.com/forms/d/e/1FAIpQLSdY-JVYJprMyOFgbdNDHCPpxxPTsCINOYspmoM_g8Q8so_dRQ/formResponse" method="post" target="hidden_iframe"
+                        <form id="form" action="https://docs.google.com/forms/d/e/1FAIpQLSduBCX6KUOB8yHJmXgHBI5T8_rAimDq7yP0fLhb1329JJUFMg/formResponse" method="post" target="hidden_iframe"
 onsubmit="submitted=true; showHide();">
 
- <label>A form to preorder class shirts online! CLASS SHIRTS ARE $12 ONLY THE SECOND BOX OPTION IS A COMFORT COLORS SHIRT </label>
+ <label>A form to reserve your parking spots online! Spots are $40</label>
  <p><p/>
                           <div class="row">
                             <div class="col-md-12 mb-30">
                                <label>Please enter your first name.</label>
-                              <input type="text" value="" data-msg-required="Please enter your first name." maxlength="100" class="form-control" name="entry.312662800" placeholder="First Name" required>
+                              <input type="text" value="" data-msg-required="Please enter your first name." maxlength="100" class="form-control" name="entry.506316630" placeholder="First Name" required>
                             </div>
                           </div>
 
                           <div class="row">
                             <div class="col-md-12 mb-30">
                               <label>Please enter your last name.</label>
-                              <input type="text" value="" data-msg-required="Please enter your last name." maxlength="100" class="form-control" name="entry.1620158876" placeholder="Last Name" required>
+                              <input type="text" value="" data-msg-required="Please enter your last name." maxlength="100" class="form-control" name="entry.71124943" placeholder="Last Name" required>
                             </div>
                           </div>
 
                           <div class="row">
                             <div class="col-md-12 mb-30">
-                               <label>Choose Your shirt option!</label>
+                              <label>Please enter your Phone Number.</label>
+                              <input type="text" value="" data-msg-required="Please enter your Phone Number." maxlength="100" class="form-control" name="entry.1405782004" placeholder="Phone Number" required>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-12 mb-30">
+                              <label>Please enter an email(Preferably something you check regularly that is not your school email).</label>
+                              <input type="text" value="" data-msg-required="Please enter an email." maxlength="100" class="form-control" name="entry.1181965567" placeholder="Email" required>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-12 mb-30">
+                              <label>Parking Spot (Don't mess with this).</label>
+                              <input id="parkingspot" type="text" value="test"  data-msg-required="Parking Spot." maxlength="100" class="form-control" name="entry.1959561457" placeholder="Parking  Spot" required>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-12 mb-30">
+                              <label>Please enter your Parking Sticker Number.</label>
+                              <input type="text" value="" data-msg-required="Please enter your Phone Number." maxlength="100" class="form-control" name="entry.294240964" placeholder="Parking Sticker Number" required>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-12 mb-30">
+                              <label>Please enter your Liscense Plate.</label>
+                              <input type="text" value="" data-msg-required="Please enter your Phone Number." maxlength="100" class="form-control" name="entry.95820676" placeholder="Liscense Plate" required>
+                            </div>
+                          </div>
+
+
+                          <div class="row">
+                            <div class="col-md-12 mb-30">
+                               <label>I have Read the Guidelines!</label>
                                <p></p>
-                              <input type="radio" name="entry.388309128" id="1" value="Option 1 (Supreme - Seniors shirt)" required/>
-                              <label for="1">Choice 1 (Supreme - Seniors shirt)</label>
+                              <input type="radio" name="entry.697111426" id="1" value="Yes" required/>
+                              <label for="1">Yes</label>
                               <p></p>
-                              <input type="radio" name="entry.388309128" id="2" value="Option 2 (Box - Seniors 2018 shirt)" required/>
-                              <label for="2">Choice 2 (Box - Seniors 2018 shirt)</label>
                             </div>
                           </div>
 
-                          <div class="row">
-                            <div class="col-md-12 mb-30">
-                               <label>Choose Your shirt size option!</label>
-                               <p></p>
-                              <input type="radio" name="entry.1382297378" id="s1" value="S" required/>
-                              <label for="s1">S</label>
-                              <p></p>
-                              <input type="radio" name="entry.1382297378" id="s2" value="M" required/>
-                              <label for="s2">M</label>
-                              <p></p>
-                              <input type="radio" name="entry.1382297378" id="s3" value="L" required/>
-                              <label for="s3">L</label>
-                              <p></p>
-                              <input type="radio" name="entry.1382297378" id="s4" value="XL" required/>
-                              <label for="s4">XL</label>
-                            </div>
-                          </div>
-
-
-                          <div class="row">
-                            <div class="col-md-12 mb-30">
-                              <label>Contact (phone or/and email).</label>
-                              <input type="text" value="" data-msg-required="Contact (phone or/and email)." maxlength="100" class="form-control" name="entry.396857364" placeholder="(phone or/and email)" required>
-                            </div>
-                          </div>
-
-                          <div class="row">
-                            <div class="col-md-12 mb-30">
-                               <label>Preferred Delivery Method</label>
-                               <p></p>
-                              <input type="radio" name="entry.2034234300" id="lp" value="Pickup during Lunch or in Mr.Pham's Class" required/>
-                              <label for="lp">Pickup during Lunch or in Mr.Pham's Class</label>
-                              <p></p>
-                              <input type="radio" name="entry.2034234300" id="4" value="4th Period" required/>
-                              <label for="4">4th Period</label>
-                              <p></p>
-                              <input type="radio" name="entry.2034234300" id="8" value="8th Period" required/>
-                              <label for="8">8th Period</label>
-                            </div>
-                          </div>
-
-                          <div class="row">
-                            <div class="col-md-12 mb-30">
-                              <label>4th or 8th period teacher / Lunch or Mr.Pham's Class </label>
-                              <input type="text" value="" data-msg-required="4th or 8th period teacher / Lunch or Mr.Pham's Class ." maxlength="100" class="form-control" name="entry.978629584" placeholder="Option of Delivery" required>
-                            </div>
-                          </div>
 
                           <div class="row">
                           <div class="col-md-12">
-                            <input type="submit" value="SEND ORDER" class="button medium rounded gray font-open-sans" data-loading-text="Loading...">
+                            <input type="submit" value="Reserve Spot" class="button medium rounded gray font-open-sans" data-loading-text="Loading...">
                           </div>
                         </div>
 
 
                         </form>
                         <div class="alert alert-success" style="display:none" id="Success">
-                          <strong>Success!</strong> Your order has been recieved. Be sure to give us your $12 A$AP! Your money can be given to any class officer or directly to Mr.Pham in room 2513!
+                          <strong>Success!</strong> Your Reservation has been recieved. Be sure to have $40 ready! Your money can be given to any class officer or directly to Mr.Pham in room 2513!
                         </div>
 
                         <div class="alert alert-danger hidden" id="contactError">
-                          <strong>Error!</strong> There was an error sending your message.
+                          <strong>Error!</strong> There was an error sending your message. Contact 5122035727 for more info.
                         </div>
 
                         <script type="text/javascript">
