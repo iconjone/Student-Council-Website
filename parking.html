@@ -278,40 +278,10 @@
         </div>
 
         <!-- COTENT CONTAINER -->
-        <div class="i-am-centered">
-          <style>
-#container {
-    position: relative;
-    left:0;
-    top:0;
-}
-#green{
-background-color:green;
-    position:relative;
-    left:80px;
-    top:80px;
-    width:50px;
-    height:50px;
-}
-#img1
-{
-    position:absolute;
-    left:0px;
-    top:0px
-}
-
-          </style>
-                              </div>
-                            </div>
-
-                            <div id="container">
-                                <img id="img1" src="http://rrhs18.com/images/gallery/parking_lot.jpg">
-                                <div id="green"></div>
-                            </div>
-                          </div>
-                          <div class="page-section bg-gray col-centered">
+                                <div class="page-section bg-gray col-centered">
                                 <div class="container-fluid col-centered">
                                   <div class="row col-centered">
+
 
         <div class="page-section bg-gray col-centered">
               <div class="container-fluid col-centered">
@@ -322,6 +292,40 @@ background-color:green;
                         <img class="port-main-img" src="images/gallery/shirts.png" alt="img" >
                   </div>
                 -->
+                <style>
+          #container {
+          position: relative;
+          left:0;
+          top:0;
+
+          }
+          #green{
+          background-color:green;
+          position:relative;
+          left:80px;
+          top:80px;
+          width:50px;
+          height:50px;
+          }
+          #img1
+          {
+          position:absolute;
+          left:0px;
+          top:0px
+          }
+        #rest{
+          visibility:hidden;
+        }
+
+                </style>
+
+                                    </div>
+                                  </div>
+
+                                  <div id="container">
+                                      <img id="img1" src="http://rrhs18.com/images/gallery/parking_lot.jpg">
+                                      <div id="green"></div>
+                                  </div>
 
 
 
@@ -360,17 +364,7 @@ $('#results').prepend('Failed to fetch data <br />');
 
 
 </script>
-                  <img src="images/gallery/shirts.png" width="302" height="30" usemap="#NavMap"
-                          style="border: 0px; border: 2.0em;">
-                  <map name="NavMap">
-                    <area shape="rect" coords="0,0,99,30" href="home.html" alt="Home"
-                          title="Home">
-                    <area shape="rect" coords="102,0,202,30" href="about.html" alt="About"
-                          title="About">
-                    <area shape="rect" coords="202,0,301,30" href="products.html"
-                          alt="Products" title="Products">
-                  </map>
-
+<div id="rest">
                   <div class="col-md-6 col-centered">
                     <div class="contact-form-cont col-centered">
                       <!-- TITLE -->
@@ -506,6 +500,7 @@ onsubmit="submitted=true; showHide();">
                 </div>
               </div>
             </div>
+          </div>
 
 
 
