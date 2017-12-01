@@ -345,7 +345,9 @@ console.log(data)
 if(data.entry){
 //	$('#results').prepend(data.entry.title['$t']+': '+data.entry.content['$t']+' <br />');
 document.getElementById("demo").value = data.entry.content['$t'];
-add();
+var div = document.getElementById('green');
+div.style.left = data.entry.content['$t']+'px';
+div.style.top = data.entry.content['$t']+'px';
 }
 //  $("#adder").load('');
 console.log("added");
