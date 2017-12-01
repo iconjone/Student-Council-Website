@@ -290,18 +290,6 @@
                   </div>
                 -->
 <style>
-#parking{
-  position: relative;
-}
-#green{
-
-  background-color:green;
-      position:relative;
-      left:80px;
-      top:80px;
-      width:50px;
-      height:50px;
-}
 #img1
 {
     position:absolute;
@@ -309,16 +297,25 @@
     top:0px
 }
 
+.boxinner
+{
+    background-color:blue;
+    position:relative;
+    left:80px;
+    top:80px;
+    width:50px
+}
+
 </style>
                     </div>
                   </div>
-                  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<div id="parking">
-<img id = "imgp" src="/images/gallery/parking_lot.jpg" alt="Its a pic" height="852" width="480">
-<div id="green"></div>
-</div>
 
+                  <div id="container">
+                      <img id="img1" src="http://rrhs18.com/images/gallery/parking_lot.jpg">
+                      <div id="green"></div>
+                  </div>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script>
 $(document).ready(function () {
 console.log('here');
