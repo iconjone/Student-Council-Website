@@ -407,18 +407,7 @@
 							init(4,3,4,4,4,2,"A4green");
 							init(4,3,4,4,4,2,"A4red");
 							}
-							function checker(){
-								var text ='';
-								var textbox = document.getElementById('#parkingspot');
-								text = textbox.value;
-								var value = text.subString(0,1);
-								var row = text.subString(2,text.length()-2);
-  if(text!='')
-	{
-		clicked(value,row,2);
-	}
-}
-setInterval(checker,30000);
+
 
 
 							</script>
@@ -500,6 +489,20 @@ setInterval(checker,30000);
 											                 div.style.display = 'none';
 											               }
 											             }
+											</script>
+											<script>
+											function checker(){
+												var text ='';
+												var text = $("#parkingspot").val();
+
+												var value = text.subString(0,1);
+												var row = text.subString(2,text.length()-2);
+				  if(text!='')
+					{
+						clicked(value,row,2);
+					}
+				}
+				setInterval(checker,30000);
 											</script>
 										</div>
 									</div>
