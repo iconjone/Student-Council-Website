@@ -313,10 +313,10 @@
 							$("#parkingspot").val(value);
 							}
 							if(data.entry.content['$t'] === 'n') {
-
+								if(value!='tricker'){
 								alert('Sorry the part has been reserved while you were ordering- Please select another spot.');
 							$("#messagebox").val('Sorry the part has been reserved while you were ordering- Please select another spot.');
-
+}
 							start();
 							}
 							}
@@ -422,7 +422,7 @@
 										<div>
 											<script type="text/javascript">
 											var submitted=false;
-											</script> <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) {checker()}" style="display:none;"></iframe> <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='';}"></iframe>-->
+											</script> <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) {clicked('tricker',9,2)}" style="display:none;"></iframe> <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='';}"></iframe>-->
 											<form action="https://docs.google.com/forms/d/e/1FAIpQLSduBCX6KUOB8yHJmXgHBI5T8_rAimDq7yP0fLhb1329JJUFMg/formResponse" id="form" method="post" name="form" onsubmit="submitted=true; showHide();" target="hidden_iframe">
 												<label>A form to reserve your parking spots online! Spots are $40</label>
 												<p></p>
