@@ -277,7 +277,7 @@
 
 									</style>
 								</div>
-								<h3>Reserve Your Parking Spot! Select the spot you want!</h3>
+								<h1>Reserve Your Parking Spot! Select the spot you want!</h1>
 							</div>
 							<div id="container">
 								<img id="img1" src="http://rrhs18.com/images/gallery/parking_lot.jpg">
@@ -309,7 +309,7 @@
 							//  val = data.entry.content['$t'];
 							//alert(val);
 							if(data.entry.content['$t'] === 'y') {
-							$("#messagebox").val('Parking has been chosen/reserved correctly');
+							$("#messagebox").val('Spot has been chosen. Continue with the form below.');
 							$("#parkingspot").val(value);
 							}
 							if(data.entry.content['$t'] === 'n') {
