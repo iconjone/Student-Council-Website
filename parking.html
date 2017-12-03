@@ -503,6 +503,7 @@
 														if(data.entry.content['$t'] === 'y') {
 														$("#messagebox").val('Spot has been chosen. Continue with the form below.');
 														$("#parkingspot").val(value);
+														console.log("value"+$("#parkingspot").val().toString());
 														}
 														if(data.entry.content['$t'] === 'n') {
 															if(value!='tricker'){
@@ -874,6 +875,7 @@
 												var text ='';
 												var text = $("#parkingspot").val().toString();
 console.log('ran');
+console.log(text);
 												var value = text.substring(0,2);
 												var row = text.substring(3,text.length-1);
 				  if(text!='' && !(submitted))
