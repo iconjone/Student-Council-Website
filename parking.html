@@ -367,6 +367,8 @@
 							var worksheet =  'default';
 							var row =         row;
 							var col =         col;
+							console.log(row);
+							console.log(col);
 							var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
 							$.getJSON(url)
 							.done(function(data){
