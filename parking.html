@@ -485,16 +485,11 @@
 							<script>
 
 														function clicked(value,row,col){
-														console.log(value);
-														console.log(row);
-														console.log(col);
-														var api = 'https://spreadsheets.google.com/feeds/cells/';
+													  var api = 'https://spreadsheets.google.com/feeds/cells/';
 														var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
 														var worksheet =  'default';
 														var row =         row;
 														var col =         col;
-														console.log(row);
-														console.log(col);
 														var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
 														$.getJSON(url)
 														.done(function(data){
@@ -505,9 +500,6 @@
 														if(data.entry.content['$t'] === 'y') {
 														$("#messagebox").val('Spot has been chosen. Continue with the form below.');
 														$("#parkingspot").val(value+row);
-														console.log("value"+$("#parkingspot").val().toString());
-														console.log(row);
-														console.log(col);
 														}
 														if(data.entry.content['$t'] === 'n') {
 															if(value!='tricker'){
@@ -520,9 +512,7 @@
 														})
 														//var textbox = document.getElementById('#parkingspot');
 														//textbox.value = value;
-														console.log(value+row+col);
 														$("#parkingspot").val(value+row);
-														console.log("value"+$("#parkingspot").val().toString());
 														//  alert(value);
 														}
 														var cellVal;
@@ -880,12 +870,8 @@
 											function checker(){
 												var text ='';
 												var text = $("#parkingspot").val().toString();
-console.log('ran');
-console.log(text);
 												var value = text.substring(0,2);
-												console.log(value);
 												var row = text.substring(2,text.length);
-												console.log(row);
 				  if(text!='' && !(submitted))
 					{
 						clicked(value,row,2);
