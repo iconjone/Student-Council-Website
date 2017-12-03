@@ -286,18 +286,18 @@
 							</div>
 							<div id="container">
 								<img id="img1" src="http://rrhs18.com/images/gallery/parking_lot.jpg">
-								<div class="green" id="A1green" onclick="clicked('A1',1,2);"></div>
-								<div class="red" id="A1red"></div>
-								<div class="green" id="A2green" onclick="clicked('A2',2,2);"></div>
-								<div class="red" id="A2red"></div>
-								<div class="green" id="A3green" onclick="clicked('A3',3,2);"></div>
-								<div class="red" id="A3red"></div>
-								<div class="green" id="A4green" onclick="clicked('A4',4,2);"></div>
-								<div class="red" id="A4red"></div>
-								<div class="green" id="A5green" onclick="clicked('A5',5,2);"></div>
-								<div class="red" id="A5red"></div>
-								<div class="green" id="A6green" onclick="clicked('A6',6,2);"></div>
-								<div class="red" id="A6red"></div>
+								<div class="green" style="top:119px; left:107px;" id="A1green" onclick="clicked('A1',1,2);"></div>
+								<div class="red" style="top:119px'; left:107px;" id="A1red"></div>
+								<div class="green" style="top:119px; left:127px;" id="A2green" onclick="clicked('A2',2,2);"></div>
+								<div class="red" style="top:119px; left:127px;" id="A2red"></div>
+								<div class="green"style="top:119px; left:150px;" id="A3green" onclick="clicked('A3',3,2);"></div>
+								<div class="red" style="top:119px; left:150px;" id="A3red"></div>
+								<div class="green" style="top:119px; left:171px;" id="A4green" onclick="clicked('A4',4,2);"></div>
+								<div class="red" style="top:119px; left:171px;" id="A4red"></div>
+								<div class="green" style="top:119px; left:193px;" id="A5green" onclick="clicked('A5',5,2);"></div>
+								<div class="red" style="top:119px; left:193px;" id="A5red"></div>
+								<div class="green" style="top:119px; left:215px;" id="A6green" onclick="clicked('A6',6,2);"></div>
+								<div class="red" style="top:119px; left:215px;" id="A6red"></div>
 								<div class="green" id="A7green" onclick="clicked('A7',7,2);"></div>
 								<div class="red" id="A7red"></div>
 								<div class="green" id="A8green" onclick="clicked('A8',8,2);"></div>
@@ -483,7 +483,310 @@
 							<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
 							</script>
 							<script>
-function clicked(i,e,n){console.log(i);var t="https://spreadsheets.google.com/feeds/cells/",r="1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k",d="default",e=e,n=n;console.log(e),console.log(n);var g=t+r+"/"+d+"/public/basic/R"+e+"C"+n+"?alt=json";$.getJSON(g).done(function(e){e.entry&&("y"===e.entry.content.$t&&($("#messagebox").val("Spot has been chosen. Continue with the form below."),$("#parkingspot").val(i)),"n"===e.entry.content.$t&&("tricker"!=i&&(alert("Sorry the part has been reserved while you were ordering- Please select another spot."),$("#messagebox").val("Sorry the part has been reserved while you were ordering- Please select another spot.")),start()))}),$("#parkingspot").val(i+e+n)}function available(i,e,n){var t="https://spreadsheets.google.com/feeds/cells/",r="1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k",d="default",i=i,e=e,g=t+r+"/"+d+"/public/basic/R"+i+"C"+e+"?alt=json";$.getJSON(g).done(function(i){var e=document.getElementById(n);i.entry&&("y"===i.entry.content.$t&&"red"===e.className&&(e.style.visibility="hidden"),"y"===i.entry.content.$t&&"green"===e.className&&(e.style.visibility="visible"),"n"===i.entry.content.$t&&"green"===e.className&&(e.style.visibility="hidden"))})}function left(i,e,n){var t="https://spreadsheets.google.com/feeds/cells/",r="1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k",d="default",i=i,e=e,g=t+r+"/"+d+"/public/basic/R"+i+"C"+e+"?alt=json";$.getJSON(g).done(function(i){var e=document.getElementById(n);if(i.entry){num=i.entry.content.$t;var e=document.getElementById(n);e.style.left=num+"px"}})}function init(i,e){var n="https://spreadsheets.google.com/feeds/cells/",t="1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k",r="default",i=i,d=3,g=n+t+"/"+r+"/public/basic/R"+i+"C"+d+"?alt=json";$.getJSON(g).done(function(n){if(n.entry){num=n.entry.content.$t;var t=document.getElementById(e);t.style.top=num+"px",t.style.visibility="visible",available(i,2,e),left(i,4,e)}})}function start(){init(1,"A1green"),init(1,"A1red"),init(2,"A2green"),init(2,"A2red"),init(3,"A3green"),init(3,"A3red"),init(4,"A4green"),init(4,"A4red"),init(5,"A5green"),init(5,"A5red"),init(6,"A6green"),init(6,"A6red"),init(7,"A7green"),init(7,"A7red"),init(8,"A8green"),init(8,"A8red"),init(9,"A9green"),init(9,"A9red"),init(10,"B1green"),init(10,"B1red"),init(11,"B2green"),init(11,"B2red"),init(12,"B3green"),init(12,"B3red"),init(13,"B4green"),init(13,"B4red"),init(14,"B5green"),init(14,"B5red"),init(15,"B6green"),init(15,"B6red"),init(16,"B7green"),init(16,"B7red"),init(17,"B8green"),init(17,"B8red"),init(18,"B9green"),init(18,"B9red"),init(19,"C1green"),init(19,"C1red"),init(20,"C2green"),init(20,"C2red"),init(21,"C3green"),init(21,"C3red"),init(22,"C4green"),init(22,"C4red"),init(23,"C5green"),init(23,"C5red"),init(24,"C6green"),init(24,"C6red"),init(25,"C7green"),init(25,"C7red"),init(26,"C8green"),init(26,"C8red"),init(27,"C9green"),init(27,"C9red"),init(28,"D1green"),init(28,"D1red"),init(29,"D2green"),init(29,"D2red"),init(30,"D3green"),init(30,"D3red"),init(31,"D4green"),init(31,"D4red"),init(32,"D5green"),init(32,"D5red"),init(33,"D6green"),init(33,"D6red"),init(34,"D7green"),init(34,"D7red"),init(35,"D8green"),init(35,"D8red"),init(36,"D9green"),init(36,"D9red"),init(37,"E1green"),init(37,"E1red"),init(38,"E2green"),init(38,"E2red"),init(39,"E3green"),init(39,"E3red"),init(40,"E4green"),init(40,"E4red"),init(41,"E5green"),init(41,"E5red"),init(42,"E6green"),init(42,"E6red"),init(43,"E7green"),init(43,"E7red"),init(44,"E8green"),init(44,"E8red"),init(45,"E9green"),init(45,"E9red"),init(46,"F1green"),init(46,"F1red"),init(47,"F2green"),init(47,"F2red"),init(48,"F3green"),init(48,"F3red"),init(49,"F4green"),init(49,"F4red"),init(50,"F5green"),init(50,"F5red"),init(51,"F6green"),init(51,"F6red"),init(52,"F7green"),init(52,"F7red"),init(53,"F8green"),init(53,"F8red"),init(54,"F9green"),init(54,"F9red"),init(55,"G1green"),init(55,"G1red"),init(56,"G2green"),init(56,"G2red"),init(57,"G3green"),init(57,"G3red"),init(58,"G4green"),init(58,"G4red"),init(59,"G5green"),init(59,"G5red"),init(60,"G6green"),init(60,"G6red"),init(61,"G7green"),init(61,"G7red"),init(62,"G8green"),init(62,"G8red"),init(63,"G9green"),init(63,"G9red"),init(64,"H1green"),init(64,"H1red"),init(65,"H2green"),init(65,"H2red"),init(66,"H3green"),init(66,"H3red"),init(67,"H4green"),init(67,"H4red"),init(68,"H5green"),init(68,"H5red"),init(69,"H6green"),init(69,"H6red"),init(70,"H7green"),init(70,"H7red"),init(71,"H8green"),init(71,"H8red"),init(72,"H9green"),init(72,"H9red"),init(73,"I1green"),init(73,"I1red"),init(74,"I2green"),init(74,"I2red"),init(75,"I3green"),init(75,"I3red"),init(76,"I4green"),init(76,"I4red"),init(77,"I5green"),init(77,"I5red"),init(78,"I6green"),init(78,"I6red"),init(79,"I7green"),init(79,"I7red"),init(80,"I8green"),init(80,"I8red"),init(81,"I9green"),init(81,"I9red"),init(82,"J1green"),init(82,"J1red"),init(83,"J2green"),init(83,"J2red"),init(84,"J3green"),init(84,"J3red"),init(85,"J4green"),init(85,"J4red"),init(86,"J5green"),init(86,"J5red"),init(87,"J6green"),init(87,"J6red"),init(88,"J7green"),init(88,"J7red"),init(89,"J8green"),init(89,"J8red"),init(90,"J9green"),init(90,"J9red"),init(91,"K1green"),init(91,"K1red"),init(92,"K2green"),init(92,"K2red"),init(93,"K3green"),init(93,"K3red"),init(94,"K4green"),init(94,"K4red"),init(95,"K5green"),init(95,"K5red"),init(96,"K6green"),init(96,"K6red")}var cellVal;window.onload=start;
+
+														function clicked(value,row,col){
+														console.log(value);
+														var api = 'https://spreadsheets.google.com/feeds/cells/';
+														var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
+														var worksheet =  'default';
+														var row =         row;
+														var col =         col;
+														console.log(row);
+														console.log(col);
+														var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
+														$.getJSON(url)
+														.done(function(data){
+
+														if(data.entry){
+														//  val = data.entry.content['$t'];
+														//alert(val);
+														if(data.entry.content['$t'] === 'y') {
+														$("#messagebox").val('Spot has been chosen. Continue with the form below.');
+														$("#parkingspot").val(value);
+														}
+														if(data.entry.content['$t'] === 'n') {
+															if(value!='tricker'){
+															alert('Sorry the part has been reserved while you were ordering- Please select another spot.');
+														$("#messagebox").val('Sorry the part has been reserved while you were ordering- Please select another spot.');
+							}
+														start();
+														}
+														}
+														})
+														//var textbox = document.getElementById('#parkingspot');
+														//textbox.value = value;
+														$("#parkingspot").val(value+row+col);
+														//  alert(value);
+														}
+														var cellVal;
+														window.onload = start;
+														function available(row, col,id){
+														var api = 'https://spreadsheets.google.com/feeds/cells/';
+														var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
+														var worksheet =  'default';
+														var row =         row;
+														var col =         col;
+														var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
+														$.getJSON(url)
+														.done(function(data){
+														var div = document.getElementById(id);
+														if(data.entry){
+														if(data.entry.content['$t'] === 'y' && div.className === "red") {
+														div.style.visibility = 'hidden';
+														//$( "#"+id ).remove();
+														}
+														if(data.entry.content['$t'] === 'y' && div.className === "green") {
+														div.style.visibility = 'visible';
+														//$( "#"+id ).remove();
+														}
+														if(data.entry.content['$t'] === 'n' && div.className === "green")
+														div.style.visibility = 'hidden';
+														}
+
+														})
+														}
+														function left(row, col,id){
+														var api = 'https://spreadsheets.google.com/feeds/cells/';
+														var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
+														var worksheet =  'default';
+														var row =         row;
+														var col =         col;
+														var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
+														$.getJSON(url)
+														.done(function(data){
+														var div = document.getElementById(id);
+														if(data.entry){
+														 num = data.entry.content['$t'];
+														 var div = document.getElementById(id);
+														div.style.left = num+'px';
+
+														}
+														})
+														}
+														function init(row,id)
+														{
+															/*
+														var api = 'https://spreadsheets.google.com/feeds/cells/';
+														var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
+														var worksheet =  'default';
+														var row =         row;
+														var col =         3;
+														var url = api+spreadsheet+'/'+worksheet+'/public/basic/R'+row+'C'+col+'?alt=json';
+														$.getJSON(url)
+														.done(function(data){
+														if(data.entry){
+														//    $('#results').prepend(data.entry.title['$t']+': '+data.entry.content['$t']+' <br />');
+														num = data.entry.content['$t'];
+														var div = document.getElementById(id);
+														//console.log()
+														div.style.top = num+'px';
+														div.style.visibility = "visible";
+														*/
+
+														available(row,2,id);
+														//left(row,4,id);
+														//}
+														//  $("#adder").load('');
+														//});
+														}
+														function start() {
+
+
+
+														init(1,"A1green");
+														init(1,"A1red");
+														init(2,"A2green");
+														init(2,"A2red");
+														init(3,"A3green");
+														init(3,"A3red");
+														init(4,"A4green");
+														init(4,"A4red");
+														init(5,"A5green");
+														init(5,"A5red");
+														init(6,"A6green");
+														init(6,"A6red");
+														init(7,"A7green");
+														init(7,"A7red");
+														init(8,"A8green");
+														init(8,"A8red");
+														init(9,"A9green");
+														init(9,"A9red");
+														init(10,"B1green");
+														init(10,"B1red");
+														init(11,"B2green");
+														init(11,"B2red");
+														init(12,"B3green");
+														init(12,"B3red");
+														init(13,"B4green");
+														init(13,"B4red");
+														init(14,"B5green");
+														init(14,"B5red");
+														init(15,"B6green");
+														init(15,"B6red");
+														init(16,"B7green");
+														init(16,"B7red");
+														init(17,"B8green");
+														init(17,"B8red");
+														init(18,"B9green");
+														init(18,"B9red");
+														init(19,"C1green");
+														init(19,"C1red");
+														init(20,"C2green");
+														init(20,"C2red");
+														init(21,"C3green");
+														init(21,"C3red");
+														init(22,"C4green");
+														init(22,"C4red");
+														init(23,"C5green");
+														init(23,"C5red");
+														init(24,"C6green");
+														init(24,"C6red");
+														init(25,"C7green");
+														init(25,"C7red");
+														init(26,"C8green");
+														init(26,"C8red");
+														init(27,"C9green");
+														init(27,"C9red");
+														init(28,"D1green");
+														init(28,"D1red");
+														init(29,"D2green");
+														init(29,"D2red");
+														init(30,"D3green");
+														init(30,"D3red");
+														init(31,"D4green");
+														init(31,"D4red");
+														init(32,"D5green");
+														init(32,"D5red");
+														init(33,"D6green");
+														init(33,"D6red");
+														init(34,"D7green");
+														init(34,"D7red");
+														init(35,"D8green");
+														init(35,"D8red");
+														init(36,"D9green");
+														init(36,"D9red");
+														init(37,"E1green");
+														init(37,"E1red");
+														init(38,"E2green");
+														init(38,"E2red");
+														init(39,"E3green");
+														init(39,"E3red");
+														init(40,"E4green");
+														init(40,"E4red");
+														init(41,"E5green");
+														init(41,"E5red");
+														init(42,"E6green");
+														init(42,"E6red");
+														init(43,"E7green");
+														init(43,"E7red");
+														init(44,"E8green");
+														init(44,"E8red");
+														init(45,"E9green");
+														init(45,"E9red");
+														init(46,"F1green");
+														init(46,"F1red");
+														init(47,"F2green");
+														init(47,"F2red");
+														init(48,"F3green");
+														init(48,"F3red");
+														init(49,"F4green");
+														init(49,"F4red");
+														init(50,"F5green");
+														init(50,"F5red");
+														init(51,"F6green");
+														init(51,"F6red");
+														init(52,"F7green");
+														init(52,"F7red");
+														init(53,"F8green");
+														init(53,"F8red");
+														init(54,"F9green");
+														init(54,"F9red");
+														init(55,"G1green");
+														init(55,"G1red");
+														init(56,"G2green");
+														init(56,"G2red");
+														init(57,"G3green");
+														init(57,"G3red");
+														init(58,"G4green");
+														init(58,"G4red");
+														init(59,"G5green");
+														init(59,"G5red");
+														init(60,"G6green");
+														init(60,"G6red");
+														init(61,"G7green");
+														init(61,"G7red");
+														init(62,"G8green");
+														init(62,"G8red");
+														init(63,"G9green");
+														init(63,"G9red");
+														init(64,"H1green");
+														init(64,"H1red");
+														init(65,"H2green");
+														init(65,"H2red");
+														init(66,"H3green");
+														init(66,"H3red");
+														init(67,"H4green");
+														init(67,"H4red");
+														init(68,"H5green");
+														init(68,"H5red");
+														init(69,"H6green");
+														init(69,"H6red");
+														init(70,"H7green");
+														init(70,"H7red");
+														init(71,"H8green");
+														init(71,"H8red");
+														init(72,"H9green");
+														init(72,"H9red");
+														init(73,"I1green");
+														init(73,"I1red");
+														init(74,"I2green");
+														init(74,"I2red");
+														init(75,"I3green");
+														init(75,"I3red");
+														init(76,"I4green");
+														init(76,"I4red");
+														init(77,"I5green");
+														init(77,"I5red");
+														init(78,"I6green");
+														init(78,"I6red");
+														init(79,"I7green");
+														init(79,"I7red");
+														init(80,"I8green");
+														init(80,"I8red");
+														init(81,"I9green");
+														init(81,"I9red");
+														init(82,"J1green");
+														init(82,"J1red");
+														init(83,"J2green");
+														init(83,"J2red");
+														init(84,"J3green");
+														init(84,"J3red");
+														init(85,"J4green");
+														init(85,"J4red");
+														init(86,"J5green");
+														init(86,"J5red");
+														init(87,"J6green");
+														init(87,"J6red");
+														init(88,"J7green");
+														init(88,"J7red");
+														init(89,"J8green");
+														init(89,"J8red");
+														init(90,"J9green");
+														init(90,"J9red");
+														init(91,"K1green");
+														init(91,"K1red");
+														init(92,"K2green");
+														init(92,"K2red");
+														init(93,"K3green");
+														init(93,"K3red");
+														init(94,"K4green");
+														init(94,"K4red");
+														init(95,"K5green");
+														init(95,"K5red");
+														init(96,"K6green");
+														init(96,"K6red");
+
+														}
 
 
 							</script>
