@@ -496,6 +496,16 @@
            //Code to hide your element
        }
     }
+		window.onload = function()
+{
+var mobile = document.getElementById('mobilehider');
+mobile.style.visibility = 'visible';
+if(document.body.clientWidth > 600)
+{
+mobile.style.visibility = 'hidden';
+ //Code to hide your element
+}
+}
 
 var last ='';
 														function clicked(value,row,col){
