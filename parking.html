@@ -281,7 +281,7 @@
 								<h1>Reserve and Paint Your Parking Spot!</h1>
 								<h3>Reserving and Painting Guidelines can be found <a href="http://rrhs18.com/parkingguidelines.html"><b>here<b></a></h3>
 								<h4>Use the reference picture below to select your spot!!</h4>
-									<div id='mobile' class="mobileShow">
+									<div id='mobilehider'>
 										<h2>(If on mobile swipe to see entire view)</h2>
 									</div>
 									<div id="container">
@@ -488,9 +488,10 @@
 							<script>
 							window.onresize = function()
     {
+			var mobile = document.getElementById('mobilehider');
+			mobile.style.visibility = 'visible';
        if(document.body.clientWidth > 600)
        {
-				 var mobile = document.getElementById('mobile');
 				 mobile.style.visibility = 'hidden';
            //Code to hide your element
        }
