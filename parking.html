@@ -484,6 +484,7 @@
 							</script>
 							<script>
 
+var last ='';
 														function clicked(value,row,col){
 													  var api = 'https://spreadsheets.google.com/feeds/cells/';
 														var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
@@ -497,9 +498,21 @@
 														if(data.entry){
 														//  val = data.entry.content['$t'];
 														//alert(val);
+														if($("#parkingspot").val().substring(0,2)!=value && !($("#parkingspot").val()=='') )
+														{
+															var cell = $("#parkingspot").val().substring(0,2);
+															var greendiv = document.getElementById(cell+'green');
+															greendiv.style.opacity = .5;
+
+														}
+
+														var greendiv = document.getElementById(value+'green');
+
 														if(data.entry.content['$t'] === 'y') {
+															greendiv.style.opacity = 1;
 														$("#messagebox").val('You have chosen spot '+ value + '. Continue with the form below.');
 														$("#parkingspot").val(value+row);
+														last=value;
 														}
 														if(data.entry.content['$t'] === 'n') {
 															if(value!='tricker'){
@@ -512,14 +525,14 @@
 														})
 														//var textbox = document.getElementById('#parkingspot');
 														//textbox.value = value;
-														$("#parkingspot").val(value+row);
+														//$("#parkingspot").val(value+row);
 														//  alert(value);
 														}
 														var cellVal;
 														window.onload = start;
 
 														function available(){
-															console.log("updating refresh");
+															console.log("refreshing");
 														url="https://spreadsheets.google.com/feeds/cells/1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k/default/public/basic?alt=json&min-row=1&min-col=1&max-col=2";
 														$.getJSON(url)
 														.done(function(data){
@@ -528,6 +541,7 @@
 														var cell = data.feed.entry[i].content['$t'];
 														var availability = data.feed.entry[i+1].content['$t'];
 														var greendiv = document.getElementById(cell+'green');
+
 														var reddiv = document.getElementById(cell+'red');
 														if(availability === 'y')
 														{
@@ -551,7 +565,7 @@
 
 							</script>
 							<div class="col-md-6 col-centered">
-								<input class="form-control" style="height:200px;font-size:14pt;" data-msg-required="Select a green spot." id='messagebox' maxlength="100" placeholder="Select a green spot." required="" type="text" value="">
+								<input class="form-control" style="height:100px;font-size:12pt;" data-msg-required="Select a green spot." id='messagebox' maxlength="100" placeholder="Select a green spot." required="" type="text" value="">
 								<div class="contact-form-cont col-centered">
 									<!-- TITLE -->
 									<div id="rest">
@@ -561,7 +575,7 @@
 										<div>
 											<script type="text/javascript">
 											var submitted=false;
-											</script> <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) {clicked('tricker',2,9); console.log('here');}" style="display:none;"></iframe> <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='';}"></iframe>-->
+											</script> <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) {clicked('tricker',2,9); console.log('submitted');}" style="display:none;"></iframe> <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='';}"></iframe>-->
 											<form action="https://docs.google.com/forms/d/e/1FAIpQLSduBCX6KUOB8yHJmXgHBI5T8_rAimDq7yP0fLhb1329JJUFMg/formResponse" id="form" method="post" name="form" onsubmit="submitted=true; showHide();" target="hidden_iframe">
 												<label>Fill out the rest of this form to reserve your spot. Spots are $40.</label>
 												<p></p>
