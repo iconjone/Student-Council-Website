@@ -1,0 +1,33 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
+</script>
+<script>
+var api = 'https://spreadsheets.google.com/feeds/cells/';
+var spreadsheet = '1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k';
+var worksheet =  'default';
+var row =         row;
+var col =         col;
+var url = api+spreadsheet+'/'+worksheet+'/public/full?min-row=2&min-col=4&max-col=4'+'?alt=json';
+url = 'https://sheets.googleapis.com/v4/spreadsheets/'+spreadsheet+'/values/A1:B2';
+url="https://spreadsheets.google.com/feeds/cells/1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k/default/public/basic?alt=json&min-row=1&min-col=1&max-col=2";
+$.getJSON(url)
+.done(function(data){
+//var div = document.getElementById(id);
+for(var i =0; i<190;i+=2){
+console.log(data.feed.entry[i].content['$t']);
+console.log(data.feed.entry[i+1].content['$t']);
+}
+
+
+
+})
+//$.getJSON("https://spreadsheets.google.com/feeds/cells/1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k/default/private/basic?min-row=5&min-col=1&max-col=2&alt=json"
+//.done(function(data){
+  //first row "title" column
+
+//    console.log(data.entry);
+//  })
+
+
+
+
+</script>
