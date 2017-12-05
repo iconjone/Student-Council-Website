@@ -595,6 +595,7 @@ mobile.style.visibility = 'hidden';
 
 														function start() {
 																available();
+																var btn = document.getElementById("submitbutton"); btn.disabled = true;
 
 														}
 
@@ -666,7 +667,7 @@ mobile.style.visibility = 'hidden';
 												</div>
 												<div class="row">
 													<div class="col-md-12">
-														<input class="button medium rounded gray font-open-sans" data-loading-text="Loading..." type="submit" value="Reserve Spot">
+														<input id='submitbutton' class="button medium rounded gray font-open-sans" data-loading-text="Loading..." type="submit" value="Reserve Spot">
 													</div>
 												</div>
 											</form>
