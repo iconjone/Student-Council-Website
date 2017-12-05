@@ -553,7 +553,19 @@ var last ='';
 														//  alert(value);
 														}
 														var cellVal;
-														window.onload = start; mobilehide;
+
+														window.onload = function() {
+  start();
+mobilehand();
+var mobile = document.getElementById('mobilehider');
+mobile.style.visibility = 'visible';
+if(document.body.clientWidth > 600)
+{
+mobile.style.visibility = 'hidden';
+ //Code to hide your element
+}
+};
+														//window.onload = start; mobilehide;
 
 														function available(){
 															console.log("refreshing");
