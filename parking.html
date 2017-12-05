@@ -519,6 +519,7 @@
 														window.onload = start;
 
 														function available(){
+															console.log("updating refresh");
 														url="https://spreadsheets.google.com/feeds/cells/1kgiyV3C_IpwyFNhMp793TribACbW9P78vj5w_KH9T5k/default/public/basic?alt=json&min-row=1&min-col=1&max-col=2";
 														$.getJSON(url)
 														.done(function(data){
