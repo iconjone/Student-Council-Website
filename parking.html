@@ -691,7 +691,7 @@ mobile.style.visibility = 'hidden';
 													</div>
 												</div>
 												<div id="texthide">
-												<label>Form is currently closed but will be open @ 5 PM - Please reload the page @ 5PM to claim your spot.</label>
+												<label>Form is currently closed but will be open @ 5 PM - Button will appear @ 5 PM.</label>
 											</div>
 												<div class="row">
 													<div class="col-md-12">
@@ -707,7 +707,6 @@ mobile.style.visibility = 'hidden';
 											</div>
 											<script type="text/javascript">
 											             function showHide() {
-
 											               //window.alert("test");
 
 											               var div = document.getElementById('Success');
@@ -721,6 +720,7 @@ mobile.style.visibility = 'hidden';
 											</script>
 											<script>
 											function checker(){
+												startavail();
 												var text ='';
 												var text = $("#parkingspot").val().toString();
 												var value = text.substring(0,2);
