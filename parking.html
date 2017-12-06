@@ -608,10 +608,12 @@ mobile.style.visibility = 'hidden';
 													if(data.entry){
 															if(data.entry.content['$t']==='y')
 														{
+															updated=true;
 															btn.disabled = false;
 															btn.style.visibility = 'visible';
 															var text = document.getElementById("texthide");
 																text.style.visibility = 'hidden';
+
 														}
 													}
 												})
@@ -637,6 +639,7 @@ mobile.style.visibility = 'hidden';
 										<div>
 											<script type="text/javascript">
 											var submitted=false;
+											var updated = false;
 											</script> <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) {clicked('tricker',2,9); console.log('submitted');}" style="display:none;"></iframe> <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='';}"></iframe>-->
 											<form action="https://docs.google.com/forms/d/e/1FAIpQLSduBCX6KUOB8yHJmXgHBI5T8_rAimDq7yP0fLhb1329JJUFMg/formResponse" id="form" method="post" name="form" onsubmit="submitted=true; showHide();" target="hidden_iframe">
 												<label>Fill out the rest of this form to reserve your spot. Spots are $40.</label>
@@ -720,7 +723,8 @@ mobile.style.visibility = 'hidden';
 											</script>
 											<script>
 											function checker(){
-												startavail();
+												if(!(updated))
+													startavail();
 												var text ='';
 												var text = $("#parkingspot").val().toString();
 												var value = text.substring(0,2);
