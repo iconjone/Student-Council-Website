@@ -597,7 +597,12 @@ mobile.style.visibility = 'hidden';
 																available();
 																var btn = document.getElementById("submitbutton"); btn.disabled = true;
 																btn.style.visibility = 'hidden';
-
+																if(true){
+																btn.disabled = false;
+																btn.style.visibility = 'visible';
+																var text = document.getElementById("texthide");
+                                  text.style.visibility = 'hidden';
+																}
 														}
 
 
@@ -666,7 +671,9 @@ mobile.style.visibility = 'hidden';
 														<p></p>
 													</div>
 												</div>
+												<div id="texthide">
 												<label>Form is currently closed but will be open @ 5 PM - Please reload the page @ 5PM to claim your spot.</label>
+											</div>
 												<div class="row">
 													<div class="col-md-12">
 														<input id='submitbutton' class="button medium rounded gray font-open-sans" data-loading-text="Loading..." type="submit" value="Reserve Spot">
