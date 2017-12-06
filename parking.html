@@ -542,6 +542,7 @@ var last ='';
 															if(value!='tricker'){
 															alert('Sorry the part has been reserved while you were ordering- Please select another spot.');
 														$("#messagebox").val('Sorry the part has been reserved while you were ordering- Please select another spot.');
+														$("#parkingspot").val('');
 																								}
 														start();
 																}
@@ -723,8 +724,7 @@ mobile.style.visibility = 'hidden';
 											</script>
 											<script>
 											function checker(){
-												if(!(updated))
-													startavail();
+
 												var text ='';
 												var text = $("#parkingspot").val().toString();
 												var value = text.substring(0,2);
@@ -735,6 +735,8 @@ mobile.style.visibility = 'hidden';
 					}
 					if(text!='' &&(submitted))
 					clicked('tricker',2,9);
+					if(!(updated))
+						startavail();
 				}
 				setInterval(checker,1000);
 											</script>
