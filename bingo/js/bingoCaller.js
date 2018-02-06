@@ -1,5 +1,5 @@
 "use strict";
-/** speech line 302 and how many balls in line 86
+/** speech line 305
  * Main Bingo Class
  * @param bingoBoardElement
  * @param speechInstance
