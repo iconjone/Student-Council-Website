@@ -70,7 +70,9 @@ var Bingo = function(bingoBoardElement, speechInstance) {
             letterBlock.appendChild(bingoLetter);
             bingoBoardElement.appendChild(letterBlock);
             // get back the current ball we left off at for generating the next block
-            currentBingoBall = add15Balls(allBingoNumbers, currentBingoBall, letterBlock, bingoLetters[i]);
+             var x = prompt("Enter tier value - Bronze:50, Silver:65, Gold:80, Purple:100", "50");
+              var tier = parseInt(x);
+            currentBingoBall = add15Balls(allBingoNumbers, currentBingoBall, letterBlock, bingoLetters[i],tier);
         }
     }
     /**
@@ -81,8 +83,8 @@ var Bingo = function(bingoBoardElement, speechInstance) {
      * @param letter
      * @returns {*}
      */
-    function add15Balls(allBingoNumbers, currentBingoBall, letterBlock, letter) {
-      var tier = 65;
+    function add15Balls(allBingoNumbers, currentBingoBall, letterBlock, letter,tier) {
+      var tier = tier;
         var totalBingoBalls = currentBingoBall + (tier/5);
         for (currentBingoBall; currentBingoBall < totalBingoBalls; currentBingoBall++) {
             var newBingoBall = helper.createDomElement('div', 'ball valign ' + letter + currentBingoBall);
