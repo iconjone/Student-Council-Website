@@ -239,11 +239,13 @@ function addToCart(){
   paypal.minicart.cart.add(data)
   var data = { "business": "admin@rrhs18.com", "quantity": parseInt(document.getElementById('package').value), "item_name": "Package - Round 1-4", "amount": 15.00, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
+  console.log('ran');
+  return false;
 }
 
 
 </script>
-<form id="form" onsubmit="addToCart();">
+<form id="form" onsubmit="addToCart(); console.log('test');">
   <div class="row">
     <div class="col-md-12 mb-30">
       <label>Bronze Tier - Round 1  $3 <br> Quantity </br> </label> <input id="bronze" class="form-control" data-msg-required="Coolz" maxlength="100" placeholder="0" required="" type="text" value="0">
@@ -272,11 +274,13 @@ function addToCart(){
 
   <div class="row">
     <div class="col-md-12">
-      <input class="button medium rounded gray font-open-sans" data-loading-text="Loading..." type="submit" value="View Cart">
+      <input class="button medium rounded gray font-open-sans" data-loading-text="Loading..." type="button" value="View Cart">
     </div>
   </div>
 
 </form>
+
+
 
 
   <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
