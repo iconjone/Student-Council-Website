@@ -221,7 +221,21 @@
 									<h3>Order Your Cards!</h3>
 								</div><!-- CONTACT FORM -->
 								<div>
-                  <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+                  <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.5/minicart.min.js"></script>
+<script>
+    paypal.minicart.render();
+    paypal.minicart.view.show()
+</script>
+<script>
+function test(){
+  var data = { "business": "admin@rrhs18.com", "item_name": "Product", "amount": 3.00, "currency_code": "USD" }
+  paypal.minicart.cart.add(data)
+}
+consol.log("ran");
+test();
+</script>
+                  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
   <input type="hidden" name="cmd" value="_s-xclick">
   <input type="hidden" name="hosted_button_id" value="AZVD324CAMCKC">
 
