@@ -230,6 +230,7 @@
 </script>
 <script>
 function addToCart(){
+  paypal.minicart.cart.destroy()
   if(parseInt(document.getElementById('bronze').value)!=0){
   var data = { "business": "admin@rrhs18.com", "quantity": parseInt(document.getElementById('bronze').value), "item_name": "Bronze - Round 1", "amount": 3.00, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
