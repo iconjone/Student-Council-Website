@@ -230,16 +230,26 @@
 </script>
 <script>
 function addToCart(){
+  if(parseInt(document.getElementById('bronze').value)!=0){
   var data = { "business": "admin@rrhs18.com", "quantity": parseInt(document.getElementById('bronze').value), "item_name": "Bronze - Round 1", "amount": 3.00, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
+}
+  if(parseInt(document.getElementById('silver').value)!=0){
   var data = { "business": "admin@rrhs18.com", "quantity": parseInt(document.getElementById('silver').value), "item_name": "Silver - Round 2", "amount": 4.00, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
+}
+  if(parseInt(document.getElementById('gold').value)!=0){
   var data = { "business": "admin@rrhs18.com", "quantity": parseInt(document.getElementById('gold').value), "item_name": "Gold - Round 3", "amount": 5.00, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
+}
+  if(parseInt(document.getElementById('purple').value)!=0){
   var data = { "business": "admin@rrhs18.com", "quantity": parseInt(document.getElementById('purple').value), "item_name": "Purple - Round 4", "amount": 6.00, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
+}
+  if(parseInt(document.getElementById('package').value)!=0){
   var data = { "business": "admin@rrhs18.com", "quantity": parseInt(document.getElementById('package').value), "item_name": "Package - Round 1-4", "amount": 15.00, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
+}
   console.log('ran');
   return false;
 }
