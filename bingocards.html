@@ -229,23 +229,13 @@
 </script>
 <script>
 function test(){
-  var data = { "business": "admin@rrhs18.com", "item_name": "Product", "amount": 0.01, "currency_code": "USD" }
+  var data = { "business": "admin@rrhs18.com", "quantity": 2, "item_name": "Bronze - Round 1", "amount": 0.01, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
 }
-console.log("ran");
+
 
 </script>
-                  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-  <input type="hidden" name="cmd" value="_cart">
-  <input type="hidden" name="hosted_button_id" value="AZVD324CAMCKC">
 
-    <div>
-                        <input type="visible" name="quantity" value="4">Quantity
-                          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                        </div>
-
-  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-  </form>
 
   <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
   <input type="hidden" name="cmd" value="_cart">
