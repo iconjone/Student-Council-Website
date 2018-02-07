@@ -232,11 +232,11 @@ function test(){
   var data = { "business": "admin@rrhs18.com", "item_name": "Product", "amount": 3.00, "currency_code": "USD" }
   paypal.minicart.cart.add(data)
 }
-consol.log("ran");
+console.log("ran");
 test();
 </script>
                   <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="cmd" value="_cart">
   <input type="hidden" name="hosted_button_id" value="AZVD324CAMCKC">
 
     <div>
@@ -247,7 +247,7 @@ test();
   <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
   </form>
 
-  <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
   <input type="hidden" name="cmd" value="_cart">
   <input type="hidden" name="business" value="KX4PF2XA9TRSS">
   <input type="hidden" name="display" value="1">
