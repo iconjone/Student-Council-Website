@@ -202,7 +202,7 @@ var Bingo = function(bingoBoardElement, speechInstance) {
      */
     function callBingoBall() {
         // if we have already called all possible numbers, quit.
-        if(bingoInstance.calledBingoNumbers.length === 75){
+        if(bingoInstance.calledBingoNumbers.length === 100){
             window.clearInterval(ballCallingInterval);
         } else {
             if ('speechSynthesis' in window) {
