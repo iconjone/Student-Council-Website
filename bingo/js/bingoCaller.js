@@ -62,7 +62,7 @@ var Bingo = function(bingoBoardElement, speechInstance) {
          * Variable that holds the current bingo ball number
          * @type {number}
          */
-        var currentBingoBall = 0;
+        var currentBingoBall = 1;
         var x = prompt("Enter tier value - Bronze:50, Silver:65, Gold:80, Purple:100", "50");
          var tier = parseInt(x);
         // Loop through the bingo letters, creating dom elements as needed - then append elements and bingo numbers
@@ -210,7 +210,7 @@ window.onkeydown = function(e) {
      */
     function callBingoBall() {
         // if we have already called all possible numbers, quit.
-        if(bingoInstance.calledBingoNumbers.length === 100){
+        if(bingoInstance.calledBingoNumbers.length === 101){
             window.clearInterval(ballCallingInterval);
         } else {
             if ('speechSynthesis' in window) {
