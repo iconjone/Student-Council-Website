@@ -13,7 +13,7 @@ var Bingo = function(bingoBoardElement, speechInstance) {
     var bingoLetters = ["R", "Y", "L", "I", "E"];
 
     /**
-     * Array to hold all of the potential bingo numbers
+     * Array to hold all of the potential bingo numbers d
      * @type {Array}
      */
     var allBingoNumbers = [];
