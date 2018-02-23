@@ -112,7 +112,7 @@ var Bingo = function(bingoBoardElement, speechInstance) {
 
 window.onkeydown = function(e) {
    if(e.keyCode == 38 || e.keyCode == 39){
-   console.log("test");
+   //console.log("test");
    callBingoBall();
  }
  }
@@ -222,12 +222,17 @@ window.onkeydown = function(e) {
             var lastBallCalled = document.getElementById('ballText').innerHTML.replace('<br>',''),
                 ballGraphicElement = document.getElementById('ballGraphic'),
                 ballTextElement = document.getElementById('ballText'),
+
                 // generate a new ball number
                 newBallNumber = allBingoNumbers[Math.floor(Math.random() * allBingoNumbers.length)],
                 // split the numbers for reading aloud ugh
                 split = newBallNumber.split(""),
                 // generate ball text for appending to ball text element
-                ballText = split[0] + "<br>" + split[1] + (split[2] ? split[2] : '');
+                ballText = split[0] + "<br>" + split[1] + (split[2] ? split[2] : '') + (split[3] ? split[3] : '');
+                console.log(newBallNumber);
+                console.log(allBingoNumbers[(allBingoNumbers.length)-1] + "this is at index" + allBingoNumbers.length)
+                //for(var i = allBingoNumbers.length; i>0; i--)
+                //console.log(allBingoNumbers[i]);
 
             // if speech is enabled, call the numbers aloud
             speechInstance.say(newBallNumber);
@@ -274,6 +279,7 @@ window.onkeydown = function(e) {
 
             // get the index of the new ball in all bingo numbers
             var index = allBingoNumbers.indexOf(newBallNumber);
+            //console.log(index)
             // remove the called number from the list of bingo numbers
             allBingoNumbers.splice(index,1);
             // add the called number to the list of called bingo numbers
