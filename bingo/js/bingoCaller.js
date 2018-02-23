@@ -224,7 +224,7 @@ window.onkeydown = function(e) {
                 ballTextElement = document.getElementById('ballText'),
                 // generate a new ball number
                 newBallNumber = allBingoNumbers[Math.floor(Math.random() * allBingoNumbers.length)],
-                // split the numbers for reading aloud
+                // split the numbers for reading aloud ugh
                 split = newBallNumber.split(""),
                 // generate ball text for appending to ball text element
                 ballText = split[0] + "<br>" + split[1] + (split[2] ? split[2] : '');
