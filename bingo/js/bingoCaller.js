@@ -109,13 +109,13 @@ var Bingo = function(bingoBoardElement, speechInstance) {
         document.getElementById("nextBall").addEventListener('click', callBingoBall);
 
     }
-    $(window).keypress(function(e) {
-var keyCode = e.which;
 
-if(keyCode == 38 || keyCode == 39){
-    callBingoBall();
-}
-});
+window.onkeydown = function(e) {
+   if(e.keyCode == 38 || e.keyCode == 39){
+   console.log("test");
+   callBingoBall();
+ }
+ }
     /**
      *  Start Game Listener
      */
