@@ -62,7 +62,7 @@ var Bingo = function(bingoBoardElement, speechInstance) {
          * Variable that holds the current bingo ball number
          * @type {number}
          */
-        var currentBingoBall = 1;
+        var currentBingoBall = 0;
         var x = prompt("Enter tier value - Bronze:50, Silver:65, Gold:80, Purple:100", "50");
          var tier = parseInt(x);
         // Loop through the bingo letters, creating dom elements as needed - then append elements and bingo numbers
