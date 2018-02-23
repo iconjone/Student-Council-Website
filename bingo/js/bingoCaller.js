@@ -107,14 +107,15 @@ var Bingo = function(bingoBoardElement, speechInstance) {
         document.getElementById('resumeGame').addEventListener('click', resumeGameListener);
         document.getElementById('range').addEventListener('change', changeDelayListener);
         document.getElementById("nextBall").addEventListener('click', callBingoBall);
-        $(document).keypress(function(e) {
-    var keyCode = e.keyCode;
 
-    if(keyCode == 38 || keyCode == 39){
-        callBingoBall();
     }
+    $(window).keypress(function(e) {
+var keyCode = e.which;
+
+if(keyCode == 38 || keyCode == 39){
+    callBingoBall();
+}
 });
-    }
     /**
      *  Start Game Listener
      */
