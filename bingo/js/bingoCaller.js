@@ -110,7 +110,7 @@ var Bingo = function(bingoBoardElement, speechInstance) {
 
     }
 
-window.onkeydown = function(e) {
+window.onkeyup = function(e) {
    if(e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 33 || e.keyCode == 34){
    console.log("test");
    callBingoBall();
