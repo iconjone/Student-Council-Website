@@ -88,7 +88,7 @@ var Bingo = function(bingoBoardElement, speechInstance) {
       var tier = tier;
         var totalBingoBalls = currentBingoBall + (tier/5);
         for (currentBingoBall; currentBingoBall < totalBingoBalls; currentBingoBall++) {
-            var newBingoBall = helper.createDomElement('div', 'ball valign ' + letter + currentBingoBall);
+            var newBingoBall = helper.createDomElement('div', 'ball valign halign ' + letter + currentBingoBall);
             newBingoBall.appendChild(document.createTextNode(currentBingoBall));
             newBingoBall.setAttribute('id', letter + currentBingoBall);
             letterBlock.appendChild(newBingoBall);
