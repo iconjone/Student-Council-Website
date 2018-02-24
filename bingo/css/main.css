@@ -85,7 +85,7 @@ footer { padding: 1rem 1.5rem 0.5rem; }
 
 /* Sizing */
 #bingoboard { width: 100%; }
-.letter, .ball { width: 6.25%; padding: 0.5rem; }
+.letter, .ball { width: 9%; padding: 0.5rem; }
 
 /* Bingo Board */
 .ball {
