@@ -252,7 +252,7 @@ function addToCart(){
   paypal.minicart.cart.add(data)
 }
 if(parseInt(document.getElementById('donation').value)!=0){
-var data = { "business": "admin@rrhs18.com", "quantity": 1, "item_name": "Package - Round 1-4", "amount": parseInt(document.getElementById('package').value), "currency_code": "USD" }
+var data = { "business": "admin@rrhs18.com", "quantity": 1, "item_name": "Package - Round 1-4", "amount": parseInt(document.getElementById('donation').value), "currency_code": "USD" }
 paypal.minicart.cart.add(data)
 }
   console.log('ran');
